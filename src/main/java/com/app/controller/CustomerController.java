@@ -24,9 +24,7 @@ public class CustomerController extends HttpServlet {
         customerList.add(customer1);
         customerList.add(customer2);
         customerList.add(customer3);
-        req.setAttribute("customer1",customerList.get(0));
-        req.setAttribute("customer2",customerList.get(1));
-        req.setAttribute("customer3",customerList.get(2));
+        req.setAttribute("customerList",customerList);
         RequestDispatcher rd =req.getRequestDispatcher("/views/info.jsp");
         rd.forward(req,resp);
     }
